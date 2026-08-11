@@ -1,17 +1,14 @@
-/* ==========================================================================
-   Keenheart Enterprise — design tokens
-   ========================================================================== */
 :root{
   --bg:            #FBF3EA;
   --bg-raised:     #FFFFFF;
   --ink:           #221C15;
   --ink-soft:      #5C5347;
-  --orange:        #FF8A3D;
-  --orange-deep:   #E06A21;
-  --orange-soft:   #FFE3CC;
+  --orange:        #006400;
+  --orange-deep:   #006400;
+  --orange-soft:   #00c100;
   --teal:          #1F3B39;
   --teal-soft:     #2C504D;
-  --amber:         #FFC24B;
+  --amber:         #006400;
   --line:          #E7DBCB;
 
   --font-display: 'Space Grotesk', system-ui, sans-serif;
