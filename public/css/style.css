@@ -1,3 +1,4 @@
+
 :root{
   --bg:            #FFFFFF;
   --bg-raised:     #FFFFFF;
@@ -10,15 +11,15 @@
   --teal-soft:     #2C504D;
   --amber:         #006400;
   --line:          #E7DBCB;
-
+ 
   --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
   --font-mono:    'IBM Plex Mono', monospace;
-
+ 
   --wrap: 1180px;
   --radius: 14px;
 }
-
+ 
 *,*::before,*::after{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 body{
@@ -32,7 +33,7 @@ body{
 img{ max-width:100%; display:block; }
 a{ color:inherit; }
 .mono{ font-family:var(--font-mono); }
-
+ 
 h1,h2,h3{
   font-family:var(--font-display);
   line-height:1.08;
@@ -43,9 +44,9 @@ h1{ font-size:clamp(2.4rem, 5vw, 4rem); font-weight:700; }
 h2{ font-size:clamp(1.7rem, 3vw, 2.5rem); font-weight:600; }
 h3{ font-size:1.15rem; font-weight:600; }
 p{ margin:0 0 1em; color:var(--ink-soft); }
-
+ 
 .wrap{ max-width:var(--wrap); margin-inline:auto; padding-inline:24px; }
-
+ 
 .eyebrow{
   text-transform:uppercase;
   letter-spacing:.14em;
@@ -54,11 +55,11 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
   font-weight:500;
   margin-bottom:.9em;
 }
-
+ 
 @media (prefers-reduced-motion: reduce){
   *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
 }
-
+ 
 /* ==========================================================================
    Buttons
    ========================================================================== */
@@ -90,7 +91,7 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
   color:var(--ink);
 }
 .btn-ghost:hover{ background:var(--ink); color:var(--bg); }
-
+ 
 /* ==========================================================================
    Background circuit spine (signature motion element)
    ========================================================================== */
@@ -102,7 +103,7 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
   background-image:
     radial-gradient(circle at 50% 0%, rgba(255,138,61,.08), transparent 45%);
 }
-
+ 
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -122,10 +123,23 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
 }
 .brand{ display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); margin-right:auto; }
 .brand-mark{ color:var(--orange-deep); display:flex; }
+.brand-mark-initials{
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  border-radius:8px;
+  background:var(--orange-deep);
+  color:#fff;
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:.82rem;
+  letter-spacing:.02em;
+}
 .brand-text{ display:flex; flex-direction:column; line-height:1; }
 .brand-name{ font-family:var(--font-display); font-weight:700; font-size:1.15rem; }
 .brand-sub{ font-family:var(--font-mono); font-size:.62rem; letter-spacing:.22em; color:var(--ink-soft); }
-
+ 
 .main-nav{ display:flex; gap:28px; }
 .main-nav a{ text-decoration:none; font-weight:500; font-size:.94rem; color:var(--ink); position:relative; padding:4px 0; }
 .main-nav a::after{
@@ -135,9 +149,9 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
   transition:right .2s ease;
 }
 .main-nav a:hover::after{ right:0; }
-
+ 
 .nav-cta{ padding:.6em 1.3em; font-size:.88rem; }
-
+ 
 .nav-toggle{
   display:none;
   flex-direction:column;
@@ -148,7 +162,7 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
   padding:6px;
 }
 .nav-toggle span{ width:22px; height:2px; background:var(--ink); display:block; }
-
+ 
 /* ==========================================================================
    Hero
    ========================================================================== */
@@ -162,12 +176,12 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
 .ink-orange{ color:var(--orange-deep); }
 .hero-lead{ font-size:1.08rem; max-width:46ch; }
 .hero-actions{ display:flex; flex-wrap:wrap; gap:14px; margin:28px 0 40px; }
-
+ 
 .hero-stats{ display:flex; gap:36px; margin:0; padding-top:22px; border-top:1px solid var(--line); }
 .hero-stats div{ display:flex; flex-direction:column; gap:2px; }
 .hero-stats dt{ font-size:1.3rem; font-weight:600; color:var(--orange-deep); }
 .hero-stats dd{ margin:0; font-size:.72rem; color:var(--ink-soft); letter-spacing:.03em; }
-
+ 
 .hero-diagram{ color:var(--ink); }
 .hero-svg .trace{
   fill:none;
@@ -185,7 +199,7 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
 .hero-svg .trace:nth-of-type(6){ animation-delay:.65s; }
 .hero-svg .trace:nth-of-type(7){ animation-delay:.75s; }
 @keyframes draw{ to{ stroke-dashoffset:0; } }
-
+ 
 .node{ fill:var(--orange-deep); }
 .node-hub{ fill:var(--teal); }
 .node-ring{
@@ -209,7 +223,7 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
   fill:var(--ink-soft);
   letter-spacing:.06em;
 }
-
+ 
 /* ==========================================================================
    Services
    ========================================================================== */
@@ -250,7 +264,7 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
 .card-dark .card-tag{ background:rgba(255,138,61,.16); color:var(--orange); }
 .card-dark .card-list li::before{ color:var(--orange); }
 .card-dark .card-link{ color:var(--orange); }
-
+ 
 .card-list{ list-style:none; margin:0 0 22px; padding:0; display:flex; flex-direction:column; gap:8px; }
 .card-list li{ position:relative; padding-left:1.3em; font-size:.92rem; }
 .card-list li::before{
@@ -265,7 +279,7 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
   color:var(--orange-deep);
 }
 .card-link:hover{ text-decoration:underline; }
-
+ 
 /* ==========================================================================
    Process
    ========================================================================== */
@@ -280,7 +294,7 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
 }
 .process-steps li:last-child{ border-bottom:1px solid var(--line); }
 .step-no{ font-size:.85rem; color:var(--orange-deep); padding-top:3px; min-width:2.4em; }
-
+ 
 /* ==========================================================================
    Why us
    ========================================================================== */
@@ -295,7 +309,7 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
   background:var(--orange);
 }
 .why-list strong{ color:var(--ink); }
-
+ 
 .job-ticket{
   background:var(--teal);
   color:#EFE9DF;
@@ -312,7 +326,7 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
 .ticket-row:last-child{ border-bottom:none; }
 .status-dot{ color:var(--orange); font-weight:600; }
 .status-dot::before{ content:"● "; }
-
+ 
 /* ==========================================================================
    Contact
    ========================================================================== */
@@ -321,7 +335,7 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
 .contact-lead{ max-width:42ch; }
 .info-block p{ margin-bottom:1.1em; color:var(--ink); }
 .info-block strong{ display:block; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--orange-deep); margin-bottom:.2em; }
-
+ 
 .contact-form{ display:flex; flex-direction:column; gap:16px; }
 .form-row{ display:flex; flex-direction:column; gap:6px; }
 .form-row-split{ flex-direction:row; gap:16px; }
@@ -344,7 +358,7 @@ input:focus, select:focus, textarea:focus{
 .form-submit{ margin-top:6px; align-self:flex-start; }
 .form-status{ font-size:.88rem; min-height:1.2em; color:var(--teal); font-weight:600; }
 .form-status.error{ color:#B3401F; }
-
+ 
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -355,7 +369,7 @@ input:focus, select:focus, textarea:focus{
 .footer-brand .brand-sub{ letter-spacing:.18em; font-size:.62rem; color:#A79E8F; }
 .footer-tag{ margin:0; font-size:.85rem; color:#C9C0B0; }
 .footer-copy{ margin:0; font-size:.75rem; color:#8B8172; }
-
+ 
 /* ==========================================================================
    Responsive
    ========================================================================== */
@@ -366,7 +380,7 @@ input:focus, select:focus, textarea:focus{
   .main-nav{ display:none; }
   .nav-toggle{ display:flex; }
   .nav-cta{ display:none; }
-
+ 
   .site-header.open .main-nav{
     display:flex;
     flex-direction:column;
@@ -382,3 +396,4 @@ input:focus, select:focus, textarea:focus{
   .hero-stats{ gap:22px; flex-wrap:wrap; }
   .form-row-split{ flex-direction:column; }
 }
+ 
