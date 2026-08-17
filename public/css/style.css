@@ -110,7 +110,7 @@ p{ margin:0 0 1em; color:var(--ink-soft); }
   position:sticky;
   top:0;
   z-index:50;
-  background:rgba(251,243,234,.86);
+  background:rgba(248, 248, 248);
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
 }
