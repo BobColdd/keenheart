@@ -61,3 +61,22 @@ form.addEventListener('submit', async (e) => {
     form.reset();
   }, 600);
 });
+
+  status.textContent = 'Opening your email app…';
+  status.classList.remove('error');
+
+  const data = Object.fromEntries(new FormData(form).entries());
+  const subject = `Quote request — ${data.service || 'General enquiry'}`;
+  const body =
+    `Name: ${data.name}\n` +
+    `Phone: ${data.phone}\n` +
+    `Email: ${data.email || '—'}\n` +
+    `Service needed: ${data.service}\n\n` +
+    `Job details:\n${data.message}`;
+
+  const mailto = `mailto:contact@keenheart.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailto;
+
+  status.textContent = "Your email app should now be open with the details filled in — just hit send.";
+  form.reset();
+});
